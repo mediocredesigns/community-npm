@@ -30,15 +30,18 @@ async function sendToXano() {
 		}
 
 		const data = await response.json();
+
 		user = data;
-		entry =
-			user.entry_id && user.entry_id.length && user.entry_id[0].length
-				? user.entry_id[0][0]
-				: null;
+		console.log(user.entry_id);
+		entry = user.entry_id[0][0] ? user.entry_id[0][0] : null;
+		// user.entry_id && user.entry_id.length && user.entry_id[0].length
+		// 	? user.entry_id[0][0]
+		// 	: null;
 		if (entry) {
 			updateUserInterface(entry);
 			updateProfile(entry);
 		}
+		console.log("entry", entry);
 	} catch (error) {
 		console.error("There was a problem with the fetch operation:", error);
 	}
