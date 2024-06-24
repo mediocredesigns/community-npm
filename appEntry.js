@@ -1,5 +1,6 @@
 if (localStorage.authToken) {
 	fetchUserEntries();
+	console.log("logged in!");
 } else {
 	alert("You must be logged in to access this page");
 	window.location.href = "/";

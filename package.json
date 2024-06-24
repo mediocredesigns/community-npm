@@ -1,0 +1,15 @@
+{
+	"name": "community-npm",
+	"version": "1.0.0",
+	"description": "npm module for community connector",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "esbuild appEntry.js --bundle --minify --watch --sourcemap --outfile=appOut.js"
+	},
+	"author": "Tim Quealy, Mediocre Designs LLC",
+	"license": "ISC",
+	"devDependencies": {
+		"esbuild": "0.21.5"
+	}
+}
